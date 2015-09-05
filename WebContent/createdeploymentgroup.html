@@ -15,6 +15,7 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <script>
 
+
 function readyFn( jQuery ) {
 	
 $("#deploy").click(function(){
@@ -24,6 +25,7 @@ $("#deploy").click(function(){
 	          deplname: $("#deplname").val(),
 	          environment:$( "#environment option:selected" ).text()
 	         },
+	                	
 	        function(data){
 	        	 console.log( "document loaded" );
 	        	 $("#logoutput").html(data);
@@ -31,13 +33,15 @@ $("#deploy").click(function(){
 	        });
 	   });
 
+$("#show").click(function(){
+    $("#logoutput").toggle();
+});
+
 }
 
 $( document ).ready( readyFn );
 
-$("#hide").click(function(){
-    $("logoutput").hide();
-});
+
 
 </script>
 
@@ -75,6 +79,7 @@ $("#hide").click(function(){
 
 			<button id="deploy" class="deploy">CreateDeploymentGroup</button>
 			<br> <br>
+			<button id="show"> Show</button>
 
 		</div>
 
