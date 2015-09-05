@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>DeployDeploymentGroup</title>
+<meta name="author" content="your name" />
+<meta name="description" content="" />
+
+<!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+
+function readyFn( jQuery ) {
+	
+$("#deploy").click(function(){
+	
+	$.post("DeployDeploymentGroup",
+	        {
+	          deplname: $("#deplname").val(),
+	          username: $("#username").val(),
+	          password: $("#password").val(),
+	          environment:$( "#environment option:selected" ).text()
+	         },
+	        function(data){
+	        	 console.log( "document loaded" );
+	        	 $("#logoutput").html(data);
+	        	 
+	        });
+	   });
+
+}
+
+$( document ).ready( readyFn );
+
+$("#hide").click(function(){
+    $("logoutput").hide();
+});
+
+</script>
+
+</head>
+<body>
+<!-- webpage content goes here in the body -->
+
+	<div id="page">
+		<div id="logo">
+			<img src="images/logo.png" />
+			<h1>
+				<a href="logo.png" id="logoLink"><b>Welcome to Informatica
+						Self Service Platform</b></a>
+			</h1>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="#/home.html">Home</a></li>
+				<li><a href="#/about.html">About</a></li>
+				<li><a href="#/contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<div></div>
+		<div id="content">
+
+			Environment:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+			<select name="options" id="environment">
+				<option value="DEV">Development</option>
+				<option value="QA">QA</option>
+			</select> <br /> <br /> <br /> Deployment
+			GroupName:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+				id="deplname"></input> <br /> <br /> <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+             UserName:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="username"><br /> <br /> <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="password"><br /> <br /> <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button id="deploy" class="deploy">DeployDeploymentGroup</button>
+			<br> <br>
+
+		</div>
+
+
+		<div id="logoutput">LOGOUTPUT</div>
+
+
+
+		<div id="footer">
+			<p>
+				Webpage made by <a href="/" target="_blank">Ahshan MD</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

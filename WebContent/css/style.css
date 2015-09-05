@@ -1,0 +1,193 @@
+/*
+* multi-line comment
+*/
+p{ line-height: 1em; }
+h1, h2, h3, h4{
+    color: orange;
+	font-weight: normal;
+	line-height: 1.1em;
+	margin: 0 0 .5em 0;
+}
+h1{ font-size: 1.7em; }
+h2{ font-size: 1.5em; }
+a{
+	color: black;
+	text-decoration: none;
+}
+	a:hover,
+	a:active{ text-decoration: underline; }
+
+/* you can structure your code's white space so that it is as readable for when you come back in the future or for other people to read and edit quickly */
+
+body{
+    font-family: arial; font-size: 80%; line-height: 1.2em; width: 80%; margin: 0; background: #eee;
+}
+/* you can put your code all in one line like above */
+#page{ margin: 20px; 
+background-color=green;}
+
+/* or on different lines like below */
+#logo{
+	width: 35%;
+	margin-top: 5px;
+	font-family: georgia;
+	display: inline-block;
+	
+	align:right;
+}
+/* but try and be as concise as possible */
+#nav{
+	width: 30%;
+	display: inline-block;
+	text-align: right;
+	float: right;
+	background-color=blue;
+}
+	#nav ul{}
+		#nav ul li{
+			display: inline-block;
+			height: 62px;
+		}
+			#nav ul li a{
+				padding: 20px;
+				background: orange;
+				color: white;
+			}
+			#nav ul li a:hover{
+				background-color: #ffb424;
+				box-shadow: 0px 1px 1px #666;
+			}
+			#nav ul li a:active{ background-color: #ff8f00; }
+
+#content{
+    width:70%;
+	margin: 40px 0;
+	background: white;
+	padding: 20px;
+	clear: both;
+	font-size:150%;
+	text-align:left;
+	align:justify;
+}
+
+#logoutput{
+	
+	    width:70%;
+	margin: 40px 0;
+	background: white;
+	padding: 20px;
+	clear: both;
+	font-size:150%;
+	text-align:center;
+	align:justify;
+}
+#footer{
+	border-bottom: 1px #ccc solid;
+	margin-bottom: 10px;
+}
+	#footer p{
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 80%;
+		color: orange;
+	}
+
+#environment{
+    width: 200px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #CCC;
+    padding: 3px;
+    font-weight: 200;
+    font-size: 15px;
+    font-family: Verdana;
+    box-shadow: 1px 1px 5px #CCC;;
+}
+
+#deploy{
+-moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	-webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33bdef), color-stop(1, #019ad2));
+	background:-moz-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-webkit-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-o-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-ms-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bdef', endColorstr='#019ad2',GradientType=0);
+	background-color:#33bdef;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 30px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+
+#deplname {
+width: 200px;
+height: 40px;
+border-radius: 3px;
+border: 1px solid #CCC;
+padding: 3px;
+font-weight: 200;
+font-size: 15px;
+font-family: Verdana;
+box-shadow: 1px 1px 5px #CCC;
+
+#sub-header{
+ padding: 100px;
+ width: 60%;
+}}
+
+
+#username {
+width: 200px;
+height: 40px;
+border-radius: 3px;
+border: 1px solid #CCC;
+padding: 3px;
+font-weight: 200;
+font-size: 15px;
+font-family: Verdana;
+box-shadow: 1px 1px 5px #CCC;
+
+#sub-header{
+ padding: 100px;
+ width: 60%;
+}}
+
+#password{
+	width: 200px;
+height: 40px;
+border-radius: 3px;
+border: 1px solid #CCC;
+padding: 3px;
+font-weight: 200;
+font-size: 15px;
+font-family: Verdana;
+box-shadow: 1px 1px 5px #CCC;
+
+#sub-header{
+ padding: 100px;
+ width: 60%;
+}}
+
+#textfield {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+/* multiple styles seperated by a , */
+#content,
+ul li a{ box-shadow: 0px 1px 1px #999; }
